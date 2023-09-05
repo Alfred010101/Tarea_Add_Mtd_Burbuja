@@ -65,6 +65,40 @@ public class Array
             x[i] = (int) (Math.random() * 100);
         }
     }
+    
+    public void ordenar()
+    {
+        int temp;
+        for (int i = 0; i < x.length; i++)
+        {
+            for (int j = 0; j < x.length -1; j++)
+            {
+                if(x[j] > x[j+1])
+                {
+                    temp = x[j];
+                    x[j] = x[j+1];
+                    x[j+1] = temp;
+                }
+            }
+        }
+    }
+    
+    public void ordenar(boolean descendente)
+    {
+        int temp;
+        for (int i = 0; i < x.length; i++)
+        {
+            for (int j = 0; j < x.length -1; j++)
+            {
+                if(x[j] < x[j+1])
+                {
+                    temp = x[j];
+                    x[j] = x[j+1];
+                    x[j+1] = temp;
+                }
+            }
+        }
+    }
 }
 
 
